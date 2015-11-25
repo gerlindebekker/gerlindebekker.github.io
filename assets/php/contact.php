@@ -8,7 +8,7 @@ if(isset($_POST['message'])){
 	$message = $_POST['message'];
     
 	
-	$to      = 'jessa.bekker@gmail.com';
+	$to      = 'gerlindebekker.be@gmail.com';
 	$total_subject = 'GerlindeBekker.be Contact Form: '.$subject;
 
 	$headers = 'From: '. $email . "\r\n" .
