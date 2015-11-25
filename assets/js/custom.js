@@ -138,23 +138,25 @@
 
 			var c_name = $('#c_name').val();
 			var c_email = $('#c_email').val();
+			var c_subject = $('#c_subject ').val();
 			var c_message = $('#c_message ').val();
 			var response = $('#contact-form .ajax-response');
 			
 			var formData = {
 				'name'       : c_name,
 				'email'      : c_email,
+				'subject'    : c_subject,
 				'message'    : c_message
 			};
 
-			if (( c_name== '' || c_email == '' || c_message == '') || (!isValidEmailAddress(c_email) )) {
+			if (( c_name== '' || c_email == '' || c_message == '' || c_subject == '') || (!isValidEmailAddress(c_email) )) {
 				response.fadeIn(500);
 				response.html('<i class="fa fa-warning"></i> Please fix the errors and try again.');
 			}
 
 			else {
 					 $.ajax({
-							type        : 'GET', // define the type of HTTP verb we want to use (POST for our form)
+							type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
 							url         : 'assets/php/contact.php', // the url where we want to POST
 							data        : formData, // our data object
 							dataType    : 'json', // what type of data do we expect back from the server
