@@ -4,27 +4,26 @@ if(isset($_POST['message'])){
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	$subject = $_POST['subject'];
 	$message = $_POST['message'];
     
 	
 	$to      = 'gerlindebekker.be@gmail.com';
-	$total_subject = 'GerlindeBekker.be Contact Form: '.$subject;
+	$subject = 'Site Contact Form';
 
 	$headers = 'From: '. $email . "\r\n" .
     'Reply-To: '. $email . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-	$status = mail($to, $total_subject, $message, $headers);
+	$status = mail($to, $subject, $message, $headers);
 
 	if($status == TRUE){	
 		$res['sendstatus'] = 'done';
 	
 		//Edit your message here
-		$res['message'] = 'Thank you for your message!';
+		$res['message'] = 'Form Submission Successful';
     }
 	else{
-		$res['message'] = 'Failed to send mail. Please mail me to '.$to;
+		$res['message'] = 'Failed to send mail. Please mail me to you@example.com';
 	}
 	
 	
