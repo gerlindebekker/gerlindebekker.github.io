@@ -315,31 +315,46 @@
 			<div class="row">
 
 				<div class="col-sm-6 col-sm-offset-3">
+				
+				      <!--<form action="assets/php/contact2.php" method="post">
+					  Your name<br>
+					  <input type="text" name="cf_name"><br>
+					  Your e-mail<br>
+					  <input type="text" name="cf_email"><br>
+					  Message<br>
+					  <textarea name="cf_message"><br>
+					  <input type="submit" value="Send">
+				      </form>
+							-->	      
+				
+				
+				
+				
+				
+				
 
-					<form id="contact-form" role="form">
-						<div class="ajax-hidden">
+<!-- 					<form id="contact-form" role="form"> -->
+					<form action="assets/php/contact2.php" method="post">
 							<div class="form-group wow fadeInUp">
-								<label class="sr-only" for="c_name">Name</label>
-								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Naam">
+<!-- 								<label class="sr-only" for="c_name">Name</label> -->
+								<input type="text" id="c_name" class="form-control" name="cf_name" placeholder="Naam">
 							</div>
 
 							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
-								<label class="sr-only" for="c_email">Email</label>
-								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+<!-- 								<label class="sr-only" for="c_email">Email</label> -->
+								<input type="email" id="c_email" class="form-control" name="cf_email" placeholder="E-mail">
 							</div>
 
 							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
-								<label class="sr-only" for="c_subject">Subject</label>
-								<input type="subject" id="c_subject" class="form-control" name="c_subject" placeholder="Onderwerp">
+<!-- 								<label class="sr-only" for="c_subject">Subject</label> -->
+								<input type="subject" id="c_subject" class="form-control" name="cf_subject" placeholder="Onderwerp">
 							</div>
 
 							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Bericht"></textarea>
+								<textarea class="form-control" id="c_message" name="cf_message" rows="7" placeholder="Bericht"></textarea>
 							</div>
 
 							<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Verzend</button>
-						</div>
-						<div class="ajax-response"></div>
 					</form>
 
 				</div>
