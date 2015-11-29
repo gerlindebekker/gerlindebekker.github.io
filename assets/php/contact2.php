@@ -2,10 +2,9 @@
 $field_name = $_POST['cf_name'];
 $field_email = $_POST['cf_email'];
 $field_message = $_POST['cf_message'];
-$field_subject = $_POST['cf_subject'];
 
 $mail_to = 'jessa.bekker@gmail.com';
-$subject = 'GerlindeBekker.be '.$field_name.' '.$field_subject;
+$subject = 'GerlindeBekker.be '.$field_name;
 
 $body_message = 'From: '.$field_name."\n";
 $body_message .= 'E-mail: '.$field_email."\n";
